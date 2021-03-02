@@ -1,0 +1,110 @@
+html, body{
+    /* colors: https://coolors.co/fffbdb-44494b-ff9933-77a0a9-87bfff */
+    --light-yellow: #fffbdbff;
+    --davys-grey: #44494bff;
+    --deep-saffron: #ff9933ff;
+    --pewter-blue: #77a0a9ff;
+    --french-sky-blue: #87bfffff;
+    font-family: 'Orbitron', sans-serif;
+    background: var(--light-yellow);
+    margin: 0;
+    font-size: 62.5%;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#calculator-container {
+    background: var(--davys-grey);
+    color: whitesmoke;
+    /* font-size: 3.2rem; */
+    height: 750px;
+    width: 700px;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 2fr 5fr;
+}
+
+#screen {
+    background: var(--pewter-blue);
+    margin: 32px;
+    padding: 16px;
+    border: 5px solid black;
+    border-radius: 5px;
+    text-align: right;
+    display: grid;
+    align-items: center;
+    font-size: 4.8rem;
+}
+
+#buttons-container {
+    padding: 30px;
+    padding-top: 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+#add {
+    grid-row: 3 / 5;
+    grid-column: 4;
+    height: 96%;
+}
+
+#clear {
+    background: var(--deep-saffron);
+}
+
+#clear-everything {
+    color: var(--deep-saffron);
+}
+
+.button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.2rem;
+    font-weight: bold;
+    width: 90%;
+    height: 90%;
+    border-radius: 7px;
+}
+
+.button:active {
+    filter: brightness(0.7);
+    transform: scale(0.95);
+}
+
+/* @media (max-width: 720px) {
+    #calculator-container { 
+        height: 550px;
+        width: 500px;
+    }
+    #buttons-container {  
+        grid-gap: 12px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    #calculator-container { 
+        height: 400px;
+        width: 320px;
+    }
+
+    #buttons-container {  
+        grid-gap: 5px;
+        padding: 16px;
+    }
+
+
+    #screen {
+        padding: 16px;
+        margin: 16px;
+        margin-bottom: 0px;
+    }
+} */
