@@ -5,7 +5,8 @@ html, body{
     --deep-saffron: #ff9933ff;
     --pewter-blue: #77a0a9ff;
     --french-sky-blue: #87bfffff;
-    font-family: 'Orbitron', sans-serif;
+    /* font-family: 'Orbitron', sans-serif; */
+    font-family: 'VT323', monospace;
     background: var(--light-yellow);
     margin: 0;
     font-size: 62.5%;
@@ -19,12 +20,12 @@ html, body{
 #calculator-container {
     background: var(--davys-grey);
     color: whitesmoke;
-    /* font-size: 3.2rem; */
     height: 750px;
     width: 700px;
     border: 2px solid black;
     border-radius: 15px;
     display: grid;
+    grid-template-columns: 700px;
     grid-template-rows: 2fr 5fr;
 }
 
@@ -35,9 +36,10 @@ html, body{
     border: 5px solid black;
     border-radius: 5px;
     text-align: right;
+    max-width: 100%;
     display: grid;
     align-items: center;
-    font-size: 4.8rem;
+    font-size: 7rem;
 }
 
 #buttons-container {
@@ -66,8 +68,8 @@ html, body{
 }
 
 .button {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3.2rem;
+    font-family: 'VT323', monospace;
+    font-size: 5rem;
     font-weight: bold;
     width: 90%;
     height: 90%;
