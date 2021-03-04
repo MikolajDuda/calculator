@@ -5,6 +5,8 @@ let operator = null;
 let answer = 0;
 let screenValue = '' + answer;
 
+updateScreen();
+
 buttonsContainer.addEventListener('click', (e) => {
     if (e.target.nodeName == 'BUTTON'){
         const buttonValue = e.target.textContent;
@@ -75,6 +77,9 @@ buttonsContainer.addEventListener('click', (e) => {
                     answer = operate(operator, +answer, +screenValue);
                     screenValue = '' + answer;
                 }
+                if ( screenValue.length >= 20) {
+                    screenValue = screenValue.substring(0, 20);
+                }
                 operator = null;
                 updateScreen();
                 break;
@@ -93,9 +98,6 @@ buttonsContainer.addEventListener('click', (e) => {
         }
     }
 });
-
-updateScreen();
-
 
 function updateScreen() {
     checkDot();
@@ -123,6 +125,9 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
+    if (b == 0) {
+        return 'WHAT THE HELL?!';
+    }
     return  a / b;
 }
 
@@ -164,4 +169,3 @@ function operate(operator, ...array) {
     }
     return result;
 }
-
